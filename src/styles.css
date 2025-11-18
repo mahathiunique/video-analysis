@@ -1,0 +1,31 @@
+/* client/src/styles.css */
+*{box-sizing:border-box}
+body,html,#root{height:100%;margin:0;background:linear-gradient(180deg,#031021,#041723);font-family:Inter,Arial,sans-serif;color:#e6f9ff}
+.app-root{display:flex;align-items:center;justify-content:center;height:100%}
+.join-card{background:linear-gradient(180deg,#071726,#071726aa);padding:28px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.6);width:380px}
+.join-card input{width:100%;padding:12px;margin-top:10px;border-radius:8px;border:none;background:#08131a;color:#eaf7ff}
+.join-card button{width:100%;padding:12px;margin-top:14px;border-radius:8px;border:none;background:#00eaff;color:#002;font-weight:700;cursor:pointer}
+
+.room-root{height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-bottom:1px solid rgba(255,255,255,0.02)}
+.title{font-weight:700;font-size:18px}
+.controls{display:flex;gap:10px;align-items:center}
+.glow-btn{background:linear-gradient(180deg,#00eaff,#00bcd6);border:none;padding:10px 14px;border-radius:10px;color:#001;font-weight:700;cursor:pointer;box-shadow:0 8px 30px rgba(0,234,255,0.08)}
+.glow-btn.leave{background:linear-gradient(180deg,#ff6b6b,#ff3d3d);color:white;box-shadow:0 8px 30px rgba(255,100,100,0.08)}
+.glow-btn.download{background:linear-gradient(180deg,#00ff9c,#00c28f)}
+
+.main-area{display:flex;gap:16px;padding:18px;height:calc(100vh - 80px)}
+.main-video{flex:1;border-radius:12px;background:linear-gradient(180deg,#071018,#081321);padding:18px;box-shadow:0 20px 60px rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center}
+.sidebar{width:380px;display:flex;flex-direction:column;gap:12px}
+.participants-list{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:10px;min-height:220px}
+.thumb{position:relative;border-radius:8px;background:#07131a;padding:8px;margin-bottom:10px;cursor:pointer;border:1px solid rgba(255,255,255,0.02)}
+.thumb .meta{position:absolute;left:10px;bottom:8px;color:#fff;font-weight:600}
+.pin-btn{position:absolute;right:8px;bottom:8px;padding:6px 8px;border-radius:8px;border:none;background:linear-gradient(180deg,#00eaff,#00bcd6);color:#001;font-weight:700}
+
+.chat-box{background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));padding:10px;border-radius:10px;flex:1;display:flex;flex-direction:column}
+.chat-messages{flex:1;overflow:auto;padding-right:8px;display:flex;flex-direction:column;gap:8px}
+.chat-msg{max-width:85%;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,0.03);color:#e6f9ff}
+.chat-msg.me{align-self:flex-end;background:linear-gradient(180deg,#00eaff,#00bcd6);color:#001}
+.chat-inputs{display:flex;gap:8px;margin-top:8px}
+.chat-inputs input{flex:1;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:#e6f9ff}
+.chat-inputs button{padding:10px 12px;border-radius:8px;border:none;background:#00eaff;color:#001;font-weight:700}

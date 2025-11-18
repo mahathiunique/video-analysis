@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import VideoRoom from "./VideoRoom";
 
-function App() {
+export default function App() {
+  const [joined, setJoined] = useState(false);
+  const [username, setUsername] = useState("");
+  const [room, setRoom] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-root">
+      {!joined ? (
+        <div className="join-card">
+          <h2>Join Pro Video</h2>
+          <input placeholder="Your name" value={username} onChange={e => setUsername(e.target.value)} />
+          <input placeholder="Room name" value={room} onChange={e => setRoom(e.target.value)} />
+          <button onClick={() => { if (!username || !room) return alert("Enter name & room"); setJoined(true); }}>
+            Join
+          </button>
+        </div>
+      ) : (
+        <VideoRoom username={username} roomName={room} />
+      )}
     </div>
   );
 }
-
-export default App;
